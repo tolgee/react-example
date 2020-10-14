@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import {PolygloatProvider, T, useSetLanguage, useTranslate} from "polygloat-react";
+import {UI} from "polygloat/ui"
 
 const ChooseLanguage = () => {
     const setLanguage = useSetLanguage();
@@ -23,8 +24,8 @@ const ComponentWithUseTranslation = () => {
 
     return (
         <>
-            <h1>{t("hello", {name: "Jan"})}</h1>
-            <h1>{bool ? t("test") : t("hello")}</h1>
+            <h1>{t("hello", {name: "Jan", surname: "Cizmar"})}</h1>
+            <h1>{bool ? t("test") : t("hello", {name: "Jan", surname: "Cizmar"})}</h1>
         </>
     );
 }
@@ -33,8 +34,9 @@ const App = () => {
     return (
         <PolygloatProvider
             filesUrlPrefix="i18n/"
-            //apiUrl="http://localhost:8080"
-            //apiKey="ga9amv7ut8slf6av0rfjdjcvqo"
+            apiUrl={process.env.REACT_APP_POLYGLOAT_API_URL}
+            apiKey={process.env.REACT_APP_POLYGLOAT_API_KEY}
+            ui={process.env.REACT_APP_POLYGLOAT_API_KEY === "true" && UI}
         >
 
             <ChooseLanguage/>
@@ -44,8 +46,6 @@ const App = () => {
                 <h1><T noWrap>test</T></h1>
                 <ComponentWithUseTranslation/>
             </div>
-
-
         </PolygloatProvider>
     )
 };
