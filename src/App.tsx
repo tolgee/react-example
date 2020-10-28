@@ -24,6 +24,9 @@ const ComponentWithUseTranslation = () => {
 
     return (
         <>
+            {t("test")}
+            {t("hello")}
+
             <h1>{t("hello", {name: "Jan", surname: "Cizmar"})}</h1>
             <h1>{bool ? t("test") : t("hello", {name: "Jan", surname: "Cizmar"})}</h1>
         </>
@@ -36,15 +39,16 @@ const App = () => {
             filesUrlPrefix="i18n/"
             apiUrl={process.env.REACT_APP_POLYGLOAT_API_URL}
             apiKey={process.env.REACT_APP_POLYGLOAT_API_KEY}
-            ui={process.env.REACT_APP_POLYGLOAT_API_KEY === "true" && UI}
+            ui={process.env.REACT_APP_POLYGLOAT_WITH_UI === "true" && UI}
         >
+
+            <ComponentWithUseTranslation/>
 
             <ChooseLanguage/>
 
             <div className="App">
                 <h1><T parameters={{name: "Jan", surname: "Cizmar"}}>hello</T></h1>
                 <h1><T noWrap>test</T></h1>
-                <ComponentWithUseTranslation/>
             </div>
         </PolygloatProvider>
     )
