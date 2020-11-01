@@ -39,7 +39,7 @@ const App = () => {
             filesUrlPrefix="i18n/"
             apiUrl={process.env.REACT_APP_POLYGLOAT_API_URL}
             apiKey={process.env.REACT_APP_POLYGLOAT_API_KEY}
-            ui={process.env.REACT_APP_POLYGLOAT_WITH_UI === "true" && UI}
+            ui={process.env.REACT_APP_POLYGLOAT_WITH_UI === "true" ? UI : undefined}
         >
 
             <ComponentWithUseTranslation/>
