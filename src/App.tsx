@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
 import {PolygloatProvider, T, useSetLanguage, useTranslate} from "polygloat-react";
-import {UI} from "polygloat/ui"
+import {UI} from "@polygloat/ui"
 
 const ChooseLanguage = () => {
     const setLanguage = useSetLanguage();

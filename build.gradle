@@ -11,6 +11,6 @@ idea {
 apply plugin: PolygloatNodePlugin
 
 polygloatNpm {
-    linkablePackages = ["polygloat-react", "polygloat"]
+    linkablePackages = ["polygloat-react", "@polygloat/core"]
     createReactApp = true
 }
