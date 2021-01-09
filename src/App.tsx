@@ -12,6 +12,7 @@ const App = () => {
             apiUrl={process.env.REACT_APP_POLYGLOAT_API_URL}
             apiKey={process.env.REACT_APP_POLYGLOAT_API_KEY}
             ui={process.env.REACT_APP_POLYGLOAT_WITH_UI === "true" ? UI : undefined}
+            availableLanguages={["en", "cs"]}
             loadingFallback={
                 <div style={{
                     display: "flex",
