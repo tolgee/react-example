@@ -18,7 +18,7 @@ global.window.postMessage = jest.fn(() => {
     return null;
 });
 
-test('renders learn react link', async () => {
+test('renders the sampleapp', async () => {
     const app = render(<App/>);
     await app.findAllByDisplayValue("En");
     expect(fetch).toBeCalled();

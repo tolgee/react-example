@@ -1,52 +1,46 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './App.css';
-import {PolygloatProvider, T, useSetLanguage, useTranslate} from "polygloat-react";
-import {UI} from "polygloat/ui"
+import {TolgeeProvider} from "@tolgee/react";
+import {UI} from "@tolgee/ui"
+import {Page} from "./Page";
 
-const ChooseLanguage = () => {
-    const setLanguage = useSetLanguage();
-
-    return (<div>
-        <select onChange={(e) => setLanguage(e.target.value)}>
-            <option value="en">En</option>
-            <option value="de">De</option>
-        </select>
-    </div>);
-};
-
-const ComponentWithUseTranslation = () => {
-    const t = useTranslate();
-    const [bool, setBool] = useState(false);
-
-    useEffect(() => {
-        setTimeout(() => setBool(true), 2000);
-    })
-
-    return (
-        <>
-            <h1>{t("hello", {name: "Jan", surname: "Cizmar"})}</h1>
-            <h1>{bool ? t("test") : t("hello", {name: "Jan", surname: "Cizmar"})}</h1>
-        </>
-    );
-}
 
 const App = () => {
     return (
-        <PolygloatProvider
+        <TolgeeProvider
             filesUrlPrefix="i18n/"
-            apiUrl={process.env.REACT_APP_POLYGLOAT_API_URL}
-            apiKey={process.env.REACT_APP_POLYGLOAT_API_KEY}
-            ui={process.env.REACT_APP_POLYGLOAT_API_KEY === "true" && UI}
+            apiUrl={process.env.REACT_APP_TOLGEE_API_URL}
+            apiKey={process.env.REACT_APP_TOLGEE_API_KEY}
+            ui={process.env.REACT_APP_TOLGEE_WITH_UI === "true" ? UI : undefined}
+            availableLanguages={["en", "cs"]}
+            loadingFallback={
+                <div style={{
+                    display: "flex",
+                    height: "100vh",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}>
+                    Loading...
+                </div>
+            }
         >
+            <div style={{
+                width: "800px",
+                margin: "0 auto 0 auto",
+                textAlign: "center",
+                paddingTop: "20px"
+            }}>
+                <div style={{padding: "20px"}}>
+                    <img src="favicon.svg" style={{
+                        width: "100px",
+                        height: "100px"
+                    }}/>
+                </div>
 
-            <ChooseLanguage/>
-
-            <div className="App">
-                <h1><T parameters={{name: "Jan", surname: "Cizmar"}}>hello</T></h1>
-                <h1><T noWrap>test</T></h1>
-                <ComponentWithUseTranslation/>
+                <h1 style={{marginBottom: "50px"}}>React with Tolgee Example App</h1>
+                <Page/>
             </div>
-        </PolygloatProvider>
+        </TolgeeProvider>
     )
 };
 
