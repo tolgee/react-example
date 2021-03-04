@@ -1,20 +1,11 @@
 {
-  "sampleApp": {
-    "hello_world!": "Hello world!",
-    "english_text_one": "English text one.",
-    "this_is_translation_in_home_folder": "This is translation in home folder",
-    "this_is_translation_in_news_folder": "This is translation in news folder",
-    "this_is_another_translation_in_news_folder": "This is another translation in news folder",
-    "this_is_standard_text_somewhere_in_dom": "This is standard text somewhere in DOM.",
-    "this_is_another_standard_text_somewhere_in_dom": "This is another standard text somewhere in DOM.",
-    "this_is_translation_retrieved_by_service": "This is translation retrieved by service.",
-    "this_is_textarea_with_placeholder_and_value": "This is textarea with placeholder and value.",
-    "this_is_textarea_with_placeholder": "This is textarea with placeholder.",
-    "this_is_input_with_value": "This is input with value.",
-    "this_is_input_with_placeholder": "This is input with placeholder.",
-    "this_is_another_standard_text_somewhere_in_dom_with_param2": "Hello {{name}} {{surname}}",
-    "this_is_another_standard_text_somewhere_in_dom_with_param": "Hello {{name}} {{surname}}"
-  },
-  "test": "This is test Text!",
-  "hello": "Hello world!"
+  "i_am_translated_placeholder" : "I am translated placeholder",
+  "And also! You can translate text inside options of select!" : "And also! You can translate text inside options of select!",
+  "hi_i_am_translated_option" : "Hi, I am translated option!",
+  "Peter has n dogs" : "Peter has {{dogsCount}} dogs.",
+  "Strings with parameters can be translated like this:" : "Strings with parameters can be translated like this:",
+  "hello_world" : "Hello world!",
+  "tolgee_example_title" : "Examplae app - Polygloat",
+  "Texts in attributes can also be translated with tolgee." : "Texts in attributes can also be translated with Tolgee.",
+  "language_select_aria_label" : "Language selection"
 }
