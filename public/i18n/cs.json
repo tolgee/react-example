@@ -3,9 +3,9 @@
   "And also! You can translate text inside options of select!" : "Také můžete překládat texty, které jsou uvnitř možností selectu.",
   "hi_i_am_translated_option" : "Ahoj, já jsem přeložená možnost!",
   "Strings with parameters can be translated like this:" : "Řetězce s parametry mohou být přeloženy takto:",
-  "Peter has n dogs" : "Petr má {{dogsCount}} psů.",
-  "tolgee_example_title" : "Ukázková aplikace - Polygloat",
-  "hello_world" : "Ahoj světe!",
+  "Peter has n dogs" : "Petr má {dogsCount} psů.",
   "Texts in attributes can also be translated with tolgee." : "Texty v atributech mohou být také přeloženy pomocí Tolgee.",
-  "language_select_aria_label" : "Výběr jazyka"
+  "language_select_aria_label" : "Výběr jazyka",
+  "tolgee_example_title" : "Ukázková aplikace | Tolgee",
+  "hello_world" : "Ahoj světe!"
 }

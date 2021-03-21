@@ -12,6 +12,7 @@ export const Page: FunctionComponent<{}> = () => {
 
             <h1><T>hello_world</T></h1>
             <p><T>Texts in attributes can also be translated with tolgee\.</T></p>
+            <p><T parameters={{dogsCount: "5"}}>Peter has n dogs</T></p>
             <input placeholder={t("i_am_translated_placeholder")}/>
             <p><T>And also! You can translate text inside options of select!</T></p>
             <select>

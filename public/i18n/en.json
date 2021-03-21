@@ -2,10 +2,10 @@
   "i_am_translated_placeholder" : "I am translated placeholder",
   "And also! You can translate text inside options of select!" : "And also! You can translate text inside options of select!",
   "hi_i_am_translated_option" : "Hi, I am translated option!",
-  "Peter has n dogs" : "Peter has {{dogsCount}} dogs.",
   "Strings with parameters can be translated like this:" : "Strings with parameters can be translated like this:",
-  "hello_world" : "Hello world!",
-  "tolgee_example_title" : "Examplae app - Polygloat",
+  "Peter has n dogs" : "Peter has {dogsCount} dogs.",
   "Texts in attributes can also be translated with tolgee." : "Texts in attributes can also be translated with Tolgee.",
-  "language_select_aria_label" : "Language selection"
+  "language_select_aria_label" : "Language selection",
+  "tolgee_example_title" : "Example app | Tolgee",
+  "hello_world" : "Hello world!"
 }
