@@ -1,0 +1,78 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: "@types/node"
+    versions:
+    - 14.14.28
+    - 14.14.30
+    - 14.14.31
+    - 14.14.32
+    - 14.14.33
+    - 14.14.34
+    - 14.14.35
+    - 14.14.37
+    - 14.14.39
+    - 14.14.41
+    - 15.0.0
+  - dependency-name: "@testing-library/user-event"
+    versions:
+    - 13.0.10
+    - 13.0.13
+    - 13.0.16
+    - 13.0.6
+    - 13.0.7
+    - 13.1.1
+    - 13.1.2
+    - 13.1.3
+  - dependency-name: concurrently
+    versions:
+    - 6.0.0
+    - 6.0.1
+  - dependency-name: "@testing-library/jest-dom"
+    versions:
+    - 5.11.10
+    - 5.11.9
+  - dependency-name: "@types/jest"
+    versions:
+    - 26.0.21
+    - 26.0.22
+  - dependency-name: "@tolgee/react"
+    versions:
+    - 1.0.0-alpha.30
+    - 1.0.0-alpha.31
+    - 1.0.0-alpha.32
+    - 1.0.0-alpha.33
+    - 1.0.0-alpha.34
+    - 1.0.0-alpha.35
+    - 1.0.0-alpha.37
+    - 1.0.0-alpha.40
+  - dependency-name: typescript
+    versions:
+    - 4.1.5
+    - 4.2.2
+    - 4.2.3
+  - dependency-name: "@tolgee/ui"
+    versions:
+    - 1.0.0-alpha.30
+    - 1.0.0-alpha.31
+    - 1.0.0-alpha.32
+    - 1.0.0-alpha.33
+    - 1.0.0-alpha.34
+    - 1.0.0-alpha.35
+  - dependency-name: "@types/react-dom"
+    versions:
+    - 17.0.1
+    - 17.0.2
+  - dependency-name: "@types/react"
+    versions:
+    - 16.14.4
+    - 16.14.5
+  - dependency-name: react-scripts
+    versions:
+    - 4.0.2
