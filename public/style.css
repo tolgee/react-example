@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400");
 
 :root * {
   box-sizing: border-box;
@@ -10,16 +10,16 @@
 }
 
 :root {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 16px;
 }
 
 :root::before {
-  content: '';
+  content: "";
   position: fixed;
   inset: 0;
-  background-image: url('/img/background.svg');
+  background-image: url("/img/background.svg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -78,7 +78,7 @@ button img {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .navbar a {
