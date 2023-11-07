@@ -1,10 +1,12 @@
 import { FormEvent, useState } from "react";
 import { Navbar } from "./components/Navbar";
 import { getInitialItems, updateLocalstorage } from "./items";
+import { useTranslate } from "@tolgee/react";
 
 export const Todos = () => {
   const [newItemValue, setNewItemValue] = useState("");
   const [items, setItems] = useState<string[]>(getInitialItems());
+  const { t } = useTranslate();
 
   const onAdd = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -27,41 +29,39 @@ export const Todos = () => {
   return (
     <div className="background-wrapper">
       <div className="example">
-        <Navbar>
-          <a href="/translation-methods">Translation methods</a>
-        </Navbar>
+        <Navbar />
         <header>
           <img src="/img/appLogo.svg" />
-          <h1 className="header__title">What to pack</h1>
+          <h1 className="header__title">{t("app-title")}</h1>
         </header>
         <section className="items">
           <form className="items__new-item" onSubmit={onAdd}>
             <input
               value={newItemValue}
               onChange={(e) => setNewItemValue(e.target.value)}
-              placeholder={"New list item"}
+              placeholder={t("item-placeholder")}
             />
             <button type="submit" disabled={!newItemValue} className="button">
               <img src="/img/iconAdd.svg" />
-              Add
+              {t("item-add")}
             </button>
           </form>
           <div className="items__list">
             {items.map((item, i) => (
               <div key={i} className="item">
                 <div className="item__text">{item}</div>
-                <button onClick={onDelete(i)}>Remove</button>
+                <button onClick={onDelete(i)}>{t("item-remove")}</button>
               </div>
             ))}
           </div>
           <div className="items__buttons">
             <button className="button" onClick={onAction("share")}>
               <img src="/img/iconShare.svg" />
-              Share
+              {t("share-button")}
             </button>
             <button className="button" onClick={onAction("email")}>
               <img src="/img/iconMail.svg" />
-              Send via Email
+              {t("email-button")}
             </button>
           </div>
         </section>
