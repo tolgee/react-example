@@ -6,7 +6,6 @@ import { useTranslate } from "@tolgee/react";
 export const Todos = () => {
   const [newItemValue, setNewItemValue] = useState("");
   const [items, setItems] = useState<string[]>(getInitialItems());
-  const { t } = useTranslate();
 
   const onAdd = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,6 +24,8 @@ export const Todos = () => {
   const onAction = (action: string) => () => {
     alert("action: " + action);
   };
+
+  const { t } = useTranslate();
 
   return (
     <div className="background-wrapper">
