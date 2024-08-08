@@ -1,9 +1,7 @@
 name: Deploy Vite App to GitHub Pages
 
 on:
-  push:
-    branches:
-      - "*"
+  pull_request:
 
 jobs:
   build-and-deploy:
