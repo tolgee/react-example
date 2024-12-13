@@ -1,6 +1,6 @@
 {
   "name": "@tolgee/react-testapp",
-  "version": "5.32.0",
+  "version": "5.33.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,14 +11,14 @@
     "clean": "rm -rf dist "
   },
   "dependencies": {
-    "@tolgee/format-icu": "5.32.0",
-    "@tolgee/react": "5.32.0",
+    "@tolgee/format-icu": "5.33.0",
+    "@tolgee/react": "5.33.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
+    "@types/react": "^18.3.16",
+    "@types/react-dom": "^18.3.5",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
